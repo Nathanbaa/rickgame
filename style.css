@@ -1,0 +1,156 @@
+@font-face{
+    font-family:"Jungle";
+    src:url("dancing_jungle/DANCING JUNGLE.ttf")
+}
+@font-face{
+    font-family:"Sch";
+    src:url("rick_font/schw.ttf")
+}
+
+*{
+    position: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 10px;
+	background-color: #333333;
+}
+
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Sch;
+}
+
+
+.score {
+    margin-top: 50px;
+	color: deepskyblue;
+	padding: 0 3rem;
+	border-radius: 1rem;
+    font-size: 80px;
+}
+
+#morty-play {
+	animation: shake 0.90s cubic-bezier(.36, .07, .19, .97) both;
+	animation-iteration-count: infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(1.5px, 0, 0);
+    }
+
+    30%,
+    60% {
+        transform: translate3d(-2px, 0, 0);
+    }
+}
+
+#morty-play:hover{
+	transition: 0.3s;
+    opacity: 0.5;
+	cursor: pointer;
+	animation: none;
+}
+
+.play-img div {
+	margin-top: 50px!important;
+}
+
+.play-img a {
+    margin-right: 15px;
+}
+
+.game {
+	width: 600px;
+	height: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+.hole {
+	flex: 1 0 33.33%;
+	overflow: hidden;
+	position: relative;
+}
+
+.hole:after {
+	display: block;
+	background: url("rick_pics/ricky.png") bottom center no-repeat;
+	background-size: contain;
+	content: "";
+	width: 100%;
+	height: 70px;
+	position: absolute;
+	z-index: 2;
+	bottom: -30px;
+}
+
+.head {
+	background: url("rick_pics/rick.png") bottom center no-repeat;
+	background-size: 60%;
+	position: absolute;
+	top: 100%; /* 100% pour que la tête soit caché et 0 pour qu'elle soit visible */
+	width: 100%;
+	height: 100%;
+	transition: all 0.4s;
+}
+
+.hole.up .head {
+	top: 0; /* 0 pour qu'elle soit visible. Donc a ajouter en js*/
+}
+
+button {
+	display: block;
+	margin: 1em auto;
+	padding: 1em;
+	border-radius: 25%;
+	background-color: black;
+	color: #fff;
+	font-size: 2em;
+	font-family: Jungle;
+}
+
+#demo1 {
+	color: white;
+	font-size: 40px;
+}
+
+#demo1:hover {
+	cursor: pointer;
+	color: greenyellow;
+}
+
+#demo2 {
+	color: white;
+	font-size: 40px;
+}
+
+#demo2:hover {
+	cursor: pointer;
+	color: greenyellow;
+}
+
+#demo3 {
+	color: white;
+	font-size: 40px;
+}
+
+#demo3:hover {
+	cursor: pointer;
+	color: greenyellow;
+}
